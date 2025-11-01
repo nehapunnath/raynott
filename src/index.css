@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* Remove all link underlines and blue colors globally */
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* Ensure no focus styles add underlines */
+a:focus {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+/* Remove visited link colors */
+a:visited {
+  color: inherit !important;
+}
+
+/* Custom font classes */
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
