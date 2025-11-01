@@ -19,6 +19,7 @@ const Header = () => {
                             Raynott
                         </a>
                     </motion.div>
+                    
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex space-x-8">
