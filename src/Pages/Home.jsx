@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaAward, FaHeadset, FaLightbulb, FaRocket, FaShieldAlt } from 'react-icons/fa';
+import { FaUsers } from 'react-icons/fa6';
 
 const Home = () => {
   const services = [
@@ -95,10 +97,49 @@ const Home = () => {
     }
   ];
 
+   const whyChooseUs = [
+    {
+      icon: FaUsers,
+      title: 'Expert Team',
+      description: 'Our team consists of experienced developers, designers, and digital strategists with proven track records in delivering successful projects.',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: FaAward,
+      title: 'Quality Assurance',
+      description: 'We maintain the highest quality standards through rigorous testing, code reviews, and continuous improvement processes.',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: FaHeadset,
+      title: 'Client-Centric Approach',
+      description: 'Your success is our priority. We work closely with you to understand your goals and deliver solutions that exceed expectations.',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: FaRocket,
+      title: 'Fast Delivery',
+      description: 'We understand time is money. Our agile development process ensures timely delivery without compromising quality.',
+      color: 'from-orange-500 to-red-500'
+    },
+    {
+      icon: FaLightbulb,
+      title: 'Innovative Solutions',
+      description: 'We stay updated with the latest technologies and trends to provide cutting-edge solutions for your business.',
+      color: 'from-yellow-500 to-amber-500'
+    },
+    {
+      icon: FaShieldAlt,
+      title: 'Secure & Reliable',
+      description: 'Security is our top priority. We implement robust security measures to protect your digital assets and data.',
+      color: 'from-indigo-500 to-purple-500'
+    }
+  ];
+
   const stats = [
     { number: '150+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
-    { number: '3+', label: 'Years Experience' },
+    { number: '9+', label: 'Years Experience' },
     { number: '24/7', label: 'Support' }
   ];
 
@@ -138,7 +179,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Raynott
+            Raynott Technologies
           </motion.h1>
           <motion.p
             className="text-xl md:text-3xl font-semibold text-gray-700 mb-8 max-w-4xl mx-auto font-poppins"
@@ -293,7 +334,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-50 to-amber-50">
+            <section className="py-20 bg-gradient-to-r from-orange-50 to-amber-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -304,44 +345,32 @@ const Home = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 font-poppins">
               Why <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-amber-600">Choose Raynott</span>
             </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-inter">
+              Discover what sets us apart in the digital solutions landscape
+            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <motion.div
-              className="bg-white rounded-2xl p-6 shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              <h3 className="text-xl font-bold text-gray-800 mb-3 font-poppins">Expert Team</h3>
-              <p className="text-gray-600 font-inter">
-                Our team consists of experienced developers, designers, and digital strategists with proven track records in delivering successful projects.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="bg-white rounded-2xl p-6 shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <h3 className="text-xl font-bold text-gray-800 mb-3 font-poppins">Quality Assurance</h3>
-              <p className="text-gray-600 font-inter">
-                We maintain the highest quality standards through rigorous testing, code reviews, and continuous improvement processes.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="bg-white rounded-2xl p-6 shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <h3 className="text-xl font-bold text-gray-800 mb-3 font-poppins">Client-Centric Approach</h3>
-              <p className="text-gray-600 font-inter">
-                Your success is our priority. We work closely with you to understand your goals and deliver solutions that exceed expectations.
-              </p>
-            </motion.div>
+            {whyChooseUs.map((item, index) => (
+              <motion.div
+                key={item.title}
+                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <item.icon />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 font-inter leading-relaxed">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

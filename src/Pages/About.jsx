@@ -1,52 +1,113 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { 
+  FaLightbulb, 
+  FaAward, 
+  FaUsers, 
+  FaEye, 
+  FaRocket, 
+  FaGlobeAmericas,
+  FaCode,
+  FaMobile,
+  FaChartLine,
+  FaPalette,
+  FaCalendarAlt,
+  FaProjectDiagram,
+  FaUserCheck,
+  FaMapMarkerAlt
+} from 'react-icons/fa';
 
 const About = () => {
   const values = [
     {
       title: 'Innovation',
-      description: 'We stay at the forefront of technology trends to deliver cutting-edge solutions that keep our clients ahead of the competition.'
+      description: 'We stay at the forefront of technology trends to deliver cutting-edge solutions that keep our clients ahead of the competition.',
+      icon: FaLightbulb
     },
     {
       title: 'Quality',
-      description: 'Every project undergoes rigorous testing and quality assurance processes to ensure excellence in delivery and performance.'
+      description: 'Every project undergoes rigorous testing and quality assurance processes to ensure excellence in delivery and performance.',
+      icon: FaAward
     },
     {
       title: 'Collaboration',
-      description: 'We work as strategic partners with our clients, fostering open communication and shared success throughout every project.'
+      description: 'We work as strategic partners with our clients, fostering open communication and shared success throughout every project.',
+      icon: FaUsers
     },
     {
       title: 'Transparency',
-      description: 'Clear communication, honest feedback, and complete visibility into our processes ensure trust and successful outcomes.'
+      description: 'Clear communication, honest feedback, and complete visibility into our processes ensure trust and successful outcomes.',
+      icon: FaEye
     }
   ];
 
   const milestones = [
-    { year: '2015', event: 'Company Founded', description: 'Established with a vision to deliver exceptional digital solutions and transform businesses through technology' },
-    { year: '2017', event: 'First 100 Projects', description: 'Successfully delivered 100+ projects across various industries and business domains' },
-    { year: '2019', event: 'Service Expansion', description: 'Expanded our service portfolio to include comprehensive digital marketing and mobile app development' },
-    { year: '2021', event: 'Industry Recognition', description: 'Received multiple industry awards for innovation and design excellence in digital solutions' },
-    { year: '2023', event: 'Global Reach', description: 'Extended our services to international clients across 15+ countries worldwide' },
-    { year: '2024', event: 'Excellence Milestone', description: 'Celebrated 9 years of delivering cutting-edge digital solutions with 500+ successful projects' }
+    { 
+      year: '2015', 
+      event: 'Company Founded', 
+      description: 'Established with a vision to deliver exceptional digital solutions and transform businesses through technology',
+      icon: FaRocket
+    },
+    { 
+      year: '2017', 
+      event: 'First 100 Projects', 
+      description: 'Successfully delivered 100+ projects across various industries and business domains',
+      icon: FaProjectDiagram
+    },
+    { 
+      year: '2019', 
+      event: 'Service Expansion', 
+      description: 'Expanded our service portfolio to include comprehensive digital marketing and mobile app development',
+      icon: FaGlobeAmericas
+    },
+    { 
+      year: '2021', 
+      event: 'Industry Recognition', 
+      description: 'Received multiple industry awards for innovation and design excellence in digital solutions',
+      icon: FaAward
+    },
+    { 
+      year: '2023', 
+      event: 'Global Reach', 
+      description: 'Extended our services to international clients across 15+ countries worldwide',
+      icon: FaMapMarkerAlt
+    },
+    { 
+      year: '2024', 
+      event: 'Excellence Milestone', 
+      description: 'Celebrated 9 years of delivering cutting-edge digital solutions with 500+ successful projects',
+      icon: FaCalendarAlt
+    }
   ];
 
   const expertise = [
     {
       category: 'Web Technologies',
-      items: ['React.js', 'Vue.js', 'Angular', 'Node.js', 'Python/Django', 'PHP/Laravel']
+      items: ['React.js', 'Vue.js', 'Angular', 'Node.js', 'Python/Django', 'PHP/Laravel'],
+      icon: FaCode
     },
     {
       category: 'Mobile Development',
-      items: ['React Native', 'Flutter', 'iOS Swift', 'Android Kotlin', 'Cross-Platform']
+      items: ['React Native', 'Flutter', 'iOS Swift', 'Android Kotlin', 'Cross-Platform'],
+      icon: FaMobile
     },
     {
       category: 'Digital Marketing',
-      items: ['SEO Optimization', 'Content Strategy', 'Social Media Marketing', 'PPC Campaigns', 'Analytics']
+      items: ['SEO Optimization', 'Content Strategy', 'Social Media Marketing', 'PPC Campaigns', 'Analytics'],
+      icon: FaChartLine
     },
     {
       category: 'Design & UX',
-      items: ['UI/UX Design', 'Brand Identity', 'Prototyping', 'User Research', 'Design Systems']
+      items: ['UI/UX Design', 'Brand Identity', 'Prototyping', 'User Research', 'Design Systems'],
+      icon: FaPalette
     }
+  ];
+
+  const stats = [
+    { number: '9+', label: 'Years Experience', icon: FaCalendarAlt, color: 'from-orange-500 to-amber-500' },
+    { number: '500+', label: 'Projects Delivered', icon: FaProjectDiagram, color: 'from-blue-500 to-cyan-500' },
+    { number: '200+', label: 'Happy Clients', icon: FaUserCheck, color: 'from-green-500 to-emerald-500' },
+    { number: '15+', label: 'Countries Served', icon: FaGlobeAmericas, color: 'from-purple-500 to-pink-500' }
   ];
 
   return (
@@ -63,13 +124,13 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-amber-600 font-montserrat">
-              About Raynott
+              About Raynott Technologies
             </h1>
             <p className="text-xl md:text-2xl font-semibold text-gray-700 mb-8 max-w-4xl mx-auto font-poppins">
               Pioneering Digital Excellence Since 2015
             </p>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto font-inter leading-relaxed">
-              For nearly a decade, Raynott has been at the forefront of digital innovation, 
+              For nearly a decade, Raynott Technologies has been at the forefront of digital innovation, 
               helping businesses transform their digital presence through cutting-edge web solutions, 
               software development, and strategic digital marketing. Our journey began with a simple 
               mission: to bridge the gap between business objectives and technological possibilities.
@@ -97,7 +158,7 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-gray-600 font-inter leading-relaxed">
                 <p>
-                  Founded in 2015, Raynott emerged during a pivotal time in digital transformation. 
+                  Founded in 2015, Raynott Technologies emerged during a pivotal time in digital transformation. 
                   We recognized that businesses needed more than just technical solutions—they needed 
                   strategic partners who could navigate the complex digital landscape.
                 </p>
@@ -121,22 +182,21 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 text-center">
-                <div className="text-3xl font-bold text-orange-600 mb-2 font-poppins">9+</div>
-                <div className="text-gray-600 font-inter">Years Experience</div>
-              </div>
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2 font-poppins">500+</div>
-                <div className="text-gray-600 font-inter">Projects Delivered</div>
-              </div>
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2 font-poppins">200+</div>
-                <div className="text-gray-600 font-inter">Happy Clients</div>
-              </div>
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 text-center">
-                <div className="text-3xl font-bold text-purple-600 mb-2 font-poppins">15+</div>
-                <div className="text-gray-600 font-inter">Countries Served</div>
-              </div>
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 text-center shadow-lg border border-gray-100"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center text-white text-xl mb-3 mx-auto`}>
+                    <stat.icon />
+                  </div>
+                  <div className="text-3xl font-bold text-gray-800 mb-2 font-poppins">{stat.number}</div>
+                  <div className="text-gray-600 font-inter">{stat.label}</div>
+                </motion.div>
+              ))}
             </motion.div>
           </div>
         </div>
@@ -163,12 +223,15 @@ const About = () => {
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
               >
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-amber-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <value.icon />
+                </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-4 font-poppins">
                   {value.title}
                 </h3>
@@ -202,19 +265,24 @@ const About = () => {
             {expertise.map((area, index) => (
               <motion.div
                 key={area.category}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-lg border border-gray-100"
+                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-lg border border-gray-100 group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">
-                  {area.category}
-                </h3>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-xl flex items-center justify-center text-white text-lg">
+                    <area.icon />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 font-poppins">
+                    {area.category}
+                  </h3>
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {area.items.map((item, idx) => (
                     <span
                       key={idx}
-                      className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-inter"
+                      className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-inter hover:bg-orange-200 transition-colors duration-300"
                     >
                       {item}
                     </span>
@@ -264,10 +332,15 @@ const About = () => {
                   </div>
                   
                   {/* Content */}
-                  <div className="flex-1 bg-white rounded-2xl p-6 shadow-lg">
-                    <h3 className="text-xl font-bold text-gray-800 mb-2 font-poppins">
-                      {milestone.event}
-                    </h3>
+                  <div className="flex-1 bg-white rounded-2xl p-6 shadow-lg group hover:shadow-xl transition-all duration-300">
+                    <div className="flex items-center gap-4 mb-3">
+                      <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center text-white">
+                        <milestone.icon />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-800 font-poppins">
+                        {milestone.event}
+                      </h3>
+                    </div>
                     <p className="text-gray-600 font-inter">
                       {milestone.description}
                     </p>
@@ -287,11 +360,14 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <motion.div
-              className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8"
+              className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 group hover:shadow-xl transition-all duration-300"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <FaRocket />
+              </div>
               <h3 className="text-3xl font-bold text-gray-800 mb-6 font-poppins">
                 Our Mission
               </h3>
@@ -303,11 +379,14 @@ const About = () => {
             </motion.div>
             
             <motion.div
-              className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8"
+              className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 group hover:shadow-xl transition-all duration-300"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-amber-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <FaGlobeAmericas />
+              </div>
               <h3 className="text-3xl font-bold text-gray-800 mb-6 font-poppins">
                 Our Vision
               </h3>
@@ -321,9 +400,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-     
-
     </div>
   );
 };

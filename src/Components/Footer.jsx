@@ -26,18 +26,15 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center space-x-3 mb-4">
-              {/* <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">R</span>
-              </div> */}
               <a href="/" className="text-2xl font-bold text-white no-underline hover:text-white">
-                Raynott
+                Raynott Technologies
               </a>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               Transforming ideas into digital reality. We provide comprehensive web solutions, 
               software development, and digital marketing services to help your business thrive.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <motion.a
                 href="https://facebook.com/raynott"
                 target="_blank"
@@ -81,7 +78,7 @@ const Footer = () => {
               >
                 <FaInstagram className="text-white text-sm" />
               </motion.a>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Services */}
@@ -90,7 +87,6 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            {/* <h4 className="text-lg font-semibold mb-4 font-poppins">Services</h4> */}
             <ul className="space-y-2">
               <li>
                 <a href="/" className="text-gray-300 hover:text-orange-400 transition-colors duration-300 no-underline font-inter flex items-center gap-2">
@@ -122,7 +118,6 @@ const Footer = () => {
                   Contact
                 </a>
               </li>
-             
             </ul>
           </motion.div>
 
@@ -134,27 +129,46 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold mb-4 font-poppins">Contact</h4>
             <div className="space-y-3 text-gray-300">
-              <a href="mailto:info@raynott.com" className="text-gray-300 hover:text-orange-400 transition-colors duration-300 no-underline flex items-center gap-3 font-inter">
+              <a href="mailto:Raynottindia@gmail.com" className="text-orange-400 font-semibold hover:text-orange-300 transition-colors duration-300 no-underline flex items-center gap-3 font-inter">
                 <FaEnvelope className="text-orange-500 flex-shrink-0" />
-                info@raynott.com
+                Raynottindia@gmail.com
               </a>
-              <a href="tel:+919876543210" className="text-gray-300 hover:text-orange-400 transition-colors duration-300 no-underline flex items-center gap-3 font-inter">
+              <a href="tel:+918618591978" className="text-orange-400 font-semibold hover:text-orange-300 transition-colors duration-300 no-underline flex items-center gap-3 font-inter">
                 <FaPhone className="text-orange-500 flex-shrink-0" />
-                +91 98765 43210
+                +91 86185 91978
               </a>
-              <a href="https://maps.google.com/?q=123+Business+Ave+Suite+100+Bangalore" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-orange-400 transition-colors duration-300 no-underline flex items-center gap-3 font-inter">
+              <a href="https://maps.google.com/?q=Neeradri+Electronic+City+Bangalore" target="_blank" rel="noopener noreferrer" className="text-orange-400 font-semibold hover:text-orange-300 transition-colors duration-300 no-underline flex items-center gap-3 font-inter">
                 <FaMapMarkerAlt className="text-orange-500 flex-shrink-0" />
-                123 Business Ave, Suite 100
+                Neeradri, Electronic City,
+                Bangalore, Karnataka 560100
               </a>
-              <div className="flex items-center gap-3 text-gray-300 font-inter">
+              {/* <div className="flex items-center gap-3 text-orange-400 font-semibold font-inter">
                 <FaGlobeAmericas className="text-orange-500 flex-shrink-0" />
-                Bangalore, Karnataka 560001
-              </div>
+                Bangalore, Karnataka 560100
+              </div> */}
             </div>
           </motion.div>
         </div>
 
-
+        {/* Bottom Bar */}
+        {/* <div className="border-t border-gray-700 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm font-inter">
+              © {currentYear} Raynott Technologies. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <a href="/privacy" className="text-gray-400 hover:text-orange-400 transition-colors duration-300 text-sm no-underline font-inter">
+                Privacy Policy
+              </a>
+              <a href="/terms" className="text-gray-400 hover:text-orange-400 transition-colors duration-300 text-sm no-underline font-inter">
+                Terms of Service
+              </a>
+              <a href="/sitemap" className="text-gray-400 hover:text-orange-400 transition-colors duration-300 text-sm no-underline font-inter">
+                Sitemap
+              </a>
+            </div>
+          </div>
+        </div> */}
       </div>
     </footer>
   );

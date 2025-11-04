@@ -16,7 +16,7 @@ const Header = () => {
                         transition={{ duration: 0.5 }}
                     >
                         <a href="/" className="text-3xl font-bold text-white no-underline hover:text-white">
-                            Raynott
+                            Raynott Technologies
                         </a>
                     </motion.div>
                     
